@@ -1,0 +1,195 @@
+<html> <head>
+<title> MILC code Version 7</title>
+</head>
+<body>
+<h1>MILC code Version 7</h1>
+<hr>
+
+<h3> Changes </h3>
+<a href="README_RELEASE_NOTES">
+Summary of improvements over previous versions.</a>
+
+<h3> Download </h3>
+<ul>
+
+<!--
+Supports quda-0.5.0 (see QUDA Prequisites below) and a little Open-MP
+threading.  Beware: Not all applications have been tested, yet!  Documentation
+is still being updated. <br> <br>
+
+-->
+
+<li> The latest release (September 6, 2016)
+
+<a href="milc_qcd-7.8.1.tar.gz"> milc_qcd-7.8.1.tar.gz </a><br> 
+
+   Documentation <a href="milcv7.html">html</a> <a href="milcv7.pdf">pdf</a><br>.
+
+<li> The previous release (February 17, 2016)
+
+<a href="milc_qcd-7.8.0.tar.gz"> milc_qcd-7.8.0.tar.gz </a><br> 
+
+With thread-safe random-number generator.
+
+<li> The previous parallel release (February 17, 2016)
+
+<a href="milc_qcd-7.7.13.tar.gz"> milc_qcd-7.7.13.tar.gz </a><br> 
+
+With the traditional random-number generator.
+
+</ul>
+
+<h3> MILC code mailing list </h3>
+
+If you wish to be notified of new releases and occasional problems,
+you are welcome to add your name to
+the <a href="http://denali.physics.indiana.edu/mailman/listinfo/milccode">
+MILCcode list </a>.
+
+<!-- to post to the list: milccode at denali -->
+
+<h3> MILC Code Tutorial </h3>
+
+The <a href="../hacklatt/"> updated HackLatt 2008 tutorials </a>
+provide a very brief introduction to the MILC code and give
+instructions for building and running it.  For an earlier version,
+see <a href="../kitpc/"> KITPC 2009 tutorials </a>.
+
+<h3> Prerequisites, if building with QUDA code</h3>
+
+GPU acceleration of some time-critical routines is now supported
+through the QUDA package.  The QUDA MILC interface is also required.
+It is currently a separate tar ball.
+
+<ul>
+<li> milc_qcd-7.7.11
+<ul>
+<li> <a href="http://lattice.github.io/downloads/quda/quda-0.5.0.tar.gz">quda-0.5.0</a>
+<li> <a href="milc_interface-20-mar-2013.tgz"> milc_interface-20-mar-2013</a>
+</ul>
+</ul>
+
+<h3> Prerequisites, if building with SciDAC code</h3>
+Most of the MILC code can be built independently of the 
+<a href="http://www.usqcd.org/usqcd-software"> SciDAC code suite </a>.
+Many modules now require the basic QIO and QMP packages.  
+When SciDAC packages are desired, the following versions of the MILC
+code are compatible with these recent SciDAC versions and later:
+
+<ul>
+<li> milc_qcd-7.7.11
+<ul>
+<li> qmp-2.4.2
+<li> qio-2.3.9
+<li> qla-1.7.3
+<li> qdp-1.9.1
+
+<li> qopqdp-0.19.1
+</ul>
+<li> milc_qcd-7.7.10-a7
+<ul>
+<li> qmp-2.4.0-a4
+<li> qio-2.3.9
+<li> qla-1.7.0-a6
+<li> qdp-1.9.0-a8
+<li> qopqdp-0.18.0
+</ul>
+
+<li> milc_qcd-7.7.8.1
+<ul>
+<li> qmp-2.4.0-a4
+<li> qio-2.3.9
+<li> qla-1.7.0-a6
+<li> qdp-1.9.0-a8
+<li> qopqdp-0.17.7
+</ul>
+
+<li> milc_qcd-7.7.5
+<ul>
+<li> qmp-2.4.0-a4
+<li> qio-2.3.9
+<li> qla-1.7.0-a6
+<li> qdp-1.9.0-a8
+<li> qopqdp-0.17.5
+</ul>
+
+<li> milc_qcd-7.6.2 through milc_qcd-7.6.3
+<ul>
+<li> qdp-1.8.0
+<li> qla-1.6.2
+<li> qio-2.3.4
+<li> qmp-2.1.7
+<li> qopqdp-0.11.2
+</ul>
+
+<li> milc_qcd-7.6.0.1
+<ul>
+<li> qdp-1.7.0
+<li> qla-1.6.2
+<li> qio-2.2.0
+<li> qmp-2.1.7
+<li> qopqdp-0.10.1
+</ul>
+
+<li> milc_qcd-7.5.0
+<ul>
+<li> qdp-1.7.0
+<li> qla-1.6.2
+<li> qio-2.1.9
+<li> qmp-2.1.7
+<li> qopqdp-0.8.1
+</ul>
+
+<li> milc_qcd-7.4.0
+<ul>
+<li> qdp-1.3.2 through qdp-1.5.7
+<li> qla-1.3.1
+<li> qio-2.1.1 through qio-2.1.8
+<li> qmp-2.1.2
+<li> qopqdp-0.7.7
+</ul>
+
+<li> milc_qcd-7.1.1 through milc_qcd-7.3.1
+<ul>
+<li> qdp-1.3.2
+<li> qla-1.3.1
+<li> qio-2.1.1
+<li> qmp-2.1.2
+<li> qopqdp-0.7.3
+</ul>
+</ul>
+<p>
+
+<h3> Other optional supporting packages</h3>
+
+<ul> 
+
+<li> FFTW <br><br>
+
+Current versions of the MILC code will optionally use the
+single-precision fftw3f or double-precsion llfw3 library in place of
+its own slow FT in applications that need it.<br><br>
+
+<li> PRIMME <br><br>
+
+One of the eigensolver applications can optionally
+use <a href="http://www.cs.wm.edu/~andreas/software/"> PRIMME </a>
+by Stathopoulos and McCombs.<br><br>
+
+</ul>
+
+<p>
+<h3> Acknowledgment </h3> 
+
+Development of the MILC and SciDAC code and the generation of archived
+gauge configurations is supported through grants by the US National
+Science Foundation and Department of Energy.
+
+<hr>
+<address><a href="http://www.physics.utah.edu/~detar">Carleton DeTar</a>
+<a href="http://www.physics.utah.edu/~detar/mailto_detar.php"> Mail Form </a>
+</a></address>
+<!-- hhmts start -->
+Sun Dec 29 17:13:31 MST 2013
+<!-- hhmts end -->
+</body> </html>
