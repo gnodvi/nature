@@ -3,16 +3,16 @@
 #-------------------------------------------------------------------------------
 
 all:  
-	(cd N/pythia8307/examples; make main01)
+	(cd EXT/pythia8307/examples; make main01)
 #	pythia8307/examples/main01 > main01.out
 
 test:  
-	(cd N/pythia8307/examples; main01)
+	(cd EXT/pythia8307/examples; main01)
 
 #--------------------------------------------
 
 clean:  
-	(cd N/pythia8307/examples; rm -f main01)
+	(cd EXT/pythia8307/examples; rm -f main01)
 #	rm -f main*.out
 
 #-------------------------------------------------------------------------------
